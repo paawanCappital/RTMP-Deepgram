@@ -1,5 +1,7 @@
-const { createClient } = require('@deepgram/sdk')
+const dotenv = require('dotenv');
+const { createClient } = require('@deepgram/sdk');
+dotenv.config();
 
-const deepgram = createClient('37eb1c8efa454eba17f457e5f2a7f08e15bd6f82')
+const deepgram = createClient(process.env.DEEPGRAM_API_KEY)
 
 module.exports = deepgram;
